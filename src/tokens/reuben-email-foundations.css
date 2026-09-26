@@ -1,0 +1,30 @@
+/*
+ * Build-time design contract for the Reuben email component system.
+ * These custom properties document shared values for tooling and Figma code
+ * syntax. They are not intended to replace email-safe inline styles in sends.
+ */
+:root {
+  --reuben-email-outer-width: 700px;
+  --reuben-email-content-width: 652px;
+  --reuben-email-gutter: 24px;
+  --reuben-email-two-column-width: 314px;
+  --reuben-email-three-column-width: 201px;
+  --reuben-email-column-gap: 24px;
+  --reuben-email-mobile-breakpoint: 480px;
+
+  --reuben-button-height: 48px;
+  --reuben-button-default-width: 160px;
+  --reuben-button-radius: 4px;
+  --reuben-divider-size: 1px;
+  --reuben-rating-size-compact: 16px;
+  --reuben-rating-size-standard: 20px;
+
+  --reuben-space-4: 4px;
+  --reuben-space-8: 8px;
+  --reuben-space-10: 10px;
+  --reuben-space-12: 12px;
+  --reuben-space-16: 16px;
+  --reuben-space-20: 20px;
+  --reuben-space-24: 24px;
+  --reuben-space-32: 32px;
+}

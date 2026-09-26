@@ -1,0 +1,9 @@
+{
+  "codeConnect": {
+    "include": ["code-connect/**/*.figma.ts"],
+    "exclude": ["source/**"],
+    "defaultBranch": "main",
+    "label": "Javascript",
+    "language": "javascript"
+  }
+}

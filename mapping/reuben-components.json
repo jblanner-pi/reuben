@@ -1,0 +1,118 @@
+{
+  "figmaFileKey": "ypyq0Th1HES77IfxpXS2jq",
+  "legacyGuideFileKey": "pUNM1HtjbjD69VYGS0k3TT",
+  "status": "phase-4-code-connect-path-mapped-client-qa-pending",
+  "publishState": "current",
+  "publishVerification": {
+    "checkedOn": "2026-09-26",
+    "result": "All ten component sets returned CURRENT from getPublishStatusAsync.",
+    "requiredAction": null
+  },
+  "supportedClients": {
+    "desktop": ["Apple Mail", "Gmail web", "Outlook for Windows", "Outlook for macOS", "Outlook web", "Yahoo web"],
+    "mobile": ["Apple Mail on iOS", "Gmail on iOS", "Gmail on Android", "Outlook on iOS", "Outlook on Android", "Yahoo on iOS", "Yahoo on Android"],
+    "extendedSmokeCoverage": ["Other standard desktop and mobile email clients"]
+  },
+  "mappings": [
+    {
+      "figmaName": "Email/Button",
+      "figmaNodeId": "25:2",
+      "source": "source/reuben/css/Reuben_BaseTemplate_08_2023.html",
+      "kind": "local-primitive",
+      "status": "normalize-before-connect"
+    },
+    {
+      "figmaName": "Email/Media",
+      "figmaNodeId": "29:5",
+      "source": ["source/reuben/content-blocks/reuben-1col-1post-full-width.html", "source/reuben/content-blocks/reuben-2col-2post.html", "source/reuben/content-blocks/reuben-3col-3post.html"],
+      "kind": "local-primitive",
+      "status": "embedded-in-module-html"
+    },
+    {
+      "figmaName": "Email/Star rating",
+      "figmaNodeId": "33:12",
+      "source": ["source/reuben/content-blocks/reuben-1col-1post-full-width.html", "source/reuben/content-blocks/reuben-2col-2post.html", "source/reuben/content-blocks/reuben-3col-3post.html"],
+      "kind": "local-primitive",
+      "status": "embedded-in-module-html"
+    },
+    {
+      "figmaName": "Email/Preheader link",
+      "figmaNodeId": "37:2",
+      "source": "source/reuben/elements/reuben-preheader-link-lr.html",
+      "kind": "local-primitive",
+      "status": "normalize-before-connect"
+    },
+    {
+      "figmaName": "Email/Post content",
+      "figmaNodeId": "44:51",
+      "source": ["source/reuben/content-blocks/reuben-1col-1post-full-width.html", "source/reuben/content-blocks/reuben-2col-2post.html", "source/reuben/content-blocks/reuben-3col-3post.html"],
+      "kind": "local-primitive",
+      "status": "embedded-in-module-html"
+    },
+    {
+      "figmaName": "Email/Three-link row",
+      "figmaNodeId": "50:2",
+      "source": "source/reuben/elements/reuben-3col-3links.html",
+      "kind": "local-primitive",
+      "status": "normalize-before-connect"
+    },
+    {
+      "figmaName": "nl-header",
+      "figmaNodeId": "57:10",
+      "source": [
+        "source/reuben/content-blocks/reuben-header-solid-bg.html",
+        "source/reuben/content-blocks/reuben-header-image-bg.html"
+      ],
+      "codeConnect": "code-connect/NlHeader.figma.ts",
+      "implementation": "src/components/modules.js#renderNlHeader",
+      "kind": "public-module",
+      "status": "code-connect-path-mapped-template-pending",
+      "codeConnectPublished": {
+        "label": "Javascript",
+        "hasTemplate": false
+      },
+      "coverage": "standard-logo-only-and-image-only-design-variants",
+      "codeConnectCoverage": "solid-header-only-until-normalized"
+    },
+    {
+      "figmaName": "1col_1post_full-width",
+      "figmaNodeId": "61:69",
+      "source": "source/reuben/content-blocks/reuben-1col-1post-full-width.html",
+      "codeConnect": "code-connect/OneColumnOnePostFullWidth.figma.ts",
+      "implementation": "src/components/modules.js#renderOneColumnOnePost",
+      "kind": "public-module",
+      "status": "code-connect-path-mapped-template-pending",
+      "codeConnectPublished": {
+        "label": "Javascript",
+        "hasTemplate": false
+      }
+    },
+    {
+      "figmaName": "2col_2post",
+      "figmaNodeId": "68:136",
+      "source": "source/reuben/content-blocks/reuben-2col-2post.html",
+      "codeConnect": "code-connect/TwoColumnTwoPost.figma.ts",
+      "implementation": "src/components/modules.js#renderTwoColumnTwoPost",
+      "kind": "public-module",
+      "status": "code-connect-path-mapped-template-pending",
+      "codeConnectPublished": {
+        "label": "Javascript",
+        "hasTemplate": false
+      }
+    },
+    {
+      "figmaName": "3col_3post",
+      "figmaNodeId": "75:387",
+      "source": "source/reuben/content-blocks/reuben-3col-3post.html",
+      "codeConnect": "code-connect/ThreeColumnThreePost.figma.ts",
+      "implementation": "src/components/modules.js#renderThreeColumnThreePost",
+      "kind": "public-module",
+      "status": "code-connect-path-mapped-template-pending",
+      "codeConnectPublished": {
+        "label": "Javascript",
+        "hasTemplate": false
+      },
+      "responsiveNote": "Mobile full-width behavior is implemented by responsive classes in production."
+    }
+  ]
+}

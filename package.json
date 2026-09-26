@@ -1,0 +1,17 @@
+{
+  "name": "reuben-email-system-pilot",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:fixtures": "node scripts/build-fixtures.mjs",
+    "code-connect:parse": "figma connect parse --config figma.config.json --exit-on-unreadable-files",
+    "code-connect:preview": "figma connect preview code-connect/*.figma.ts --config figma.config.json",
+    "code-connect:publish:dry-run": "figma connect publish --dry-run --force --config figma.config.json --exit-on-unreadable-files",
+    "code-connect:publish": "figma connect publish --force --config figma.config.json --exit-on-unreadable-files",
+    "qa:static": "node scripts/validate-fixtures.mjs",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "@figma/code-connect": "^2.0.1"
+  }
+}

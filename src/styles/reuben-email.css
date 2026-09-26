@@ -1,0 +1,74 @@
+html,
+body {
+  margin: 0 auto !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+body {
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+}
+
+table,
+td {
+  border-collapse: collapse !important;
+}
+
+img {
+  border: 0;
+  display: block;
+  outline: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration-skip-ink: auto;
+}
+
+#outlook a {
+  padding: 0;
+}
+
+.ExternalClass,
+.ExternalClass * {
+  line-height: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  u + .body .full-wrap {
+    width: 100% !important;
+    width: 100vw !important;
+  }
+
+  .wrap,
+  .stack-column {
+    float: none !important;
+    height: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .responsive-image {
+    height: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .mobile-column-gap {
+    padding-bottom: 32px !important;
+  }
+
+  .three-column-cell {
+    padding-bottom: 32px !important;
+    padding-right: 0 !important;
+  }
+
+  .link-column {
+    border-right: 0 !important;
+  }
+
+  .link-column-cell {
+    padding: 8px 24px !important;
+  }
+}
