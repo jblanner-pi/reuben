@@ -1,6 +1,6 @@
 // url=https://www.figma.com/design/ypyq0Th1HES77IfxpXS2jq/Reuben---Email-Component-Library?node-id=68-136
-// source=src/components/modules.js
-// component=renderTwoColumnTwoPost
+// source=src/reuben-framework.js
+// component=loadReubenModule
 import figma from 'figma'
 
 const instance = figma.selectedInstance
@@ -11,19 +11,15 @@ const viewport = instance.getEnum('Viewport', {
 })
 
 export default {
-  example: figma.code`renderTwoColumnTwoPost({
-  sectionTitle: "${sectionTitle}",
-  posts,
-  links,
-})`,
-  imports: ['import { renderTwoColumnTwoPost } from "../src/components/modules.js"'],
+  example: figma.code`await loadReubenModule("2col_2post")`,
+  imports: ['import { loadReubenModule } from "../src/reuben-framework.js"'],
   id: 'reuben-two-column-two-post',
   metadata: {
     nestable: false,
     props: {
       viewport,
-      responsiveOutput: true,
-      contentInput: 'posts and links contain the repeated nested instance data represented in Figma',
+      sectionTitle,
+      sourcePolicy: 'Returns the exact body fragment from the canonical Reuben source snapshot.',
     },
   },
 }

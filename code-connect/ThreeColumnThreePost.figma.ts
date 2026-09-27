@@ -1,6 +1,6 @@
 // url=https://www.figma.com/design/ypyq0Th1HES77IfxpXS2jq/Reuben---Email-Component-Library?node-id=75-387
-// source=src/components/modules.js
-// component=renderThreeColumnThreePost
+// source=src/reuben-framework.js
+// component=loadReubenModule
 import figma from 'figma'
 
 const instance = figma.selectedInstance
@@ -11,19 +11,15 @@ const viewport = instance.getEnum('Viewport', {
 })
 
 export default {
-  example: figma.code`renderThreeColumnThreePost({
-  sectionTitle: "${sectionTitle}",
-  posts,
-  links,
-})`,
-  imports: ['import { renderThreeColumnThreePost } from "../src/components/modules.js"'],
+  example: figma.code`await loadReubenModule("3col_3post")`,
+  imports: ['import { loadReubenModule } from "../src/reuben-framework.js"'],
   id: 'reuben-three-column-three-post',
   metadata: {
     nestable: false,
     props: {
       viewport,
-      responsiveOutput: true,
-      contentInput: 'posts and links contain the repeated nested instance data represented in Figma',
+      sectionTitle,
+      sourcePolicy: 'Returns the exact canonical fragment and reports the legacy 24 px star-size gap separately.',
     },
   },
 }

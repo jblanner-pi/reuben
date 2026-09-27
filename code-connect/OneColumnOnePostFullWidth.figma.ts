@@ -1,6 +1,6 @@
 // url=https://www.figma.com/design/ypyq0Th1HES77IfxpXS2jq/Reuben---Email-Component-Library?node-id=61-69
-// source=src/components/modules.js
-// component=renderOneColumnOnePost
+// source=src/reuben-framework.js
+// component=loadReubenModule
 import figma from 'figma'
 
 const instance = figma.selectedInstance
@@ -10,15 +10,14 @@ const viewport = instance.getEnum('Viewport', {
 })
 
 export default {
-  example: figma.code`renderOneColumnOnePost({ post })`,
-  imports: ['import { renderOneColumnOnePost } from "../src/components/modules.js"'],
+  example: figma.code`await loadReubenModule("1col_1post_full-width")`,
+  imports: ['import { loadReubenModule } from "../src/reuben-framework.js"'],
   id: 'reuben-one-column-one-post-full-width',
   metadata: {
     nestable: false,
     props: {
       viewport,
-      responsiveOutput: true,
-      contentInput: 'post contains the Media and Post content data represented in Figma',
+      sourcePolicy: 'Returns the exact body fragment from the canonical Reuben source snapshot.',
     },
   },
 }

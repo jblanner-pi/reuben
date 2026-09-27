@@ -1,12 +1,14 @@
 {
   "figmaFileKey": "ypyq0Th1HES77IfxpXS2jq",
   "legacyGuideFileKey": "pUNM1HtjbjD69VYGS0k3TT",
-  "status": "phase-4-code-connect-path-mapped-client-qa-pending",
+  "status": "phase-4-source-framework-pivot-client-qa-pending",
   "publishState": "current",
-  "publishVerification": {
-    "checkedOn": "2026-09-26",
-    "result": "All ten component sets returned CURRENT from getPublishStatusAsync.",
-    "requiredAction": null
+  "sourcePolicy": "Canonical production markup is selected from source/reuben and composed without reconstruction.",
+  "codeConnectState": {
+    "publishedOn": "2026-09-26",
+    "publishedTarget": "experimental normalized renderers",
+    "hasTemplate": true,
+    "replacement": "Source-aware templates are prepared locally and require review before republishing."
   },
   "supportedClients": {
     "desktop": ["Apple Mail", "Gmail web", "Outlook for Windows", "Outlook for macOS", "Outlook web", "Yahoo web"],
@@ -18,101 +20,81 @@
       "figmaName": "Email/Button",
       "figmaNodeId": "25:2",
       "source": "source/reuben/css/Reuben_BaseTemplate_08_2023.html",
-      "kind": "local-primitive",
-      "status": "normalize-before-connect"
+      "kind": "embedded-source-pattern",
+      "status": "documented-not-standalone"
     },
     {
       "figmaName": "Email/Media",
       "figmaNodeId": "29:5",
       "source": ["source/reuben/content-blocks/reuben-1col-1post-full-width.html", "source/reuben/content-blocks/reuben-2col-2post.html", "source/reuben/content-blocks/reuben-3col-3post.html"],
-      "kind": "local-primitive",
-      "status": "embedded-in-module-html"
+      "kind": "embedded-source-pattern",
+      "status": "embedded-in-canonical-modules"
     },
     {
       "figmaName": "Email/Star rating",
       "figmaNodeId": "33:12",
       "source": ["source/reuben/content-blocks/reuben-1col-1post-full-width.html", "source/reuben/content-blocks/reuben-2col-2post.html", "source/reuben/content-blocks/reuben-3col-3post.html"],
-      "kind": "local-primitive",
-      "status": "embedded-in-module-html"
+      "kind": "embedded-source-pattern",
+      "status": "three-column-size-gap-recorded"
     },
     {
       "figmaName": "Email/Preheader link",
       "figmaNodeId": "37:2",
       "source": "source/reuben/elements/reuben-preheader-link-lr.html",
-      "kind": "local-primitive",
-      "status": "normalize-before-connect"
+      "kind": "legacy-source-pattern",
+      "status": "figma-source-gap-recorded"
     },
     {
       "figmaName": "Email/Post content",
       "figmaNodeId": "44:51",
       "source": ["source/reuben/content-blocks/reuben-1col-1post-full-width.html", "source/reuben/content-blocks/reuben-2col-2post.html", "source/reuben/content-blocks/reuben-3col-3post.html"],
-      "kind": "local-primitive",
-      "status": "embedded-in-module-html"
+      "kind": "embedded-source-pattern",
+      "status": "embedded-in-canonical-modules"
     },
     {
       "figmaName": "Email/Three-link row",
       "figmaNodeId": "50:2",
       "source": "source/reuben/elements/reuben-3col-3links.html",
-      "kind": "local-primitive",
-      "status": "normalize-before-connect"
+      "kind": "legacy-source-pattern",
+      "status": "available-for-future-catalog-entry"
     },
     {
       "figmaName": "nl-header",
       "figmaNodeId": "57:10",
-      "source": [
-        "source/reuben/content-blocks/reuben-header-solid-bg.html",
-        "source/reuben/content-blocks/reuben-header-image-bg.html"
-      ],
+      "source": ["source/reuben/content-blocks/reuben-header-solid-bg.html", "source/reuben/content-blocks/reuben-header-image-bg.html"],
       "codeConnect": "code-connect/NlHeader.figma.ts",
-      "implementation": "src/components/modules.js#renderNlHeader",
+      "implementation": "src/reuben-framework.js#resolveFigmaModule",
       "kind": "public-module",
-      "status": "code-connect-path-mapped-template-pending",
-      "codeConnectPublished": {
-        "label": "Javascript",
-        "hasTemplate": false
-      },
-      "coverage": "standard-logo-only-and-image-only-design-variants",
-      "codeConnectCoverage": "solid-header-only-until-normalized"
+      "status": "source-aware-remap-pending-review",
+      "coverage": "standard-has-legacy-source-logo-only-and-image-only-are-explicit-gaps"
     },
     {
       "figmaName": "1col_1post_full-width",
       "figmaNodeId": "61:69",
       "source": "source/reuben/content-blocks/reuben-1col-1post-full-width.html",
       "codeConnect": "code-connect/OneColumnOnePostFullWidth.figma.ts",
-      "implementation": "src/components/modules.js#renderOneColumnOnePost",
+      "implementation": "src/reuben-framework.js#loadReubenModule",
       "kind": "public-module",
-      "status": "code-connect-path-mapped-template-pending",
-      "codeConnectPublished": {
-        "label": "Javascript",
-        "hasTemplate": false
-      }
+      "status": "source-aware-remap-pending-review"
     },
     {
       "figmaName": "2col_2post",
       "figmaNodeId": "68:136",
       "source": "source/reuben/content-blocks/reuben-2col-2post.html",
       "codeConnect": "code-connect/TwoColumnTwoPost.figma.ts",
-      "implementation": "src/components/modules.js#renderTwoColumnTwoPost",
+      "implementation": "src/reuben-framework.js#loadReubenModule",
       "kind": "public-module",
-      "status": "code-connect-path-mapped-template-pending",
-      "codeConnectPublished": {
-        "label": "Javascript",
-        "hasTemplate": false
-      }
+      "status": "source-aware-remap-pending-review"
     },
     {
       "figmaName": "3col_3post",
       "figmaNodeId": "75:387",
       "source": "source/reuben/content-blocks/reuben-3col-3post.html",
       "codeConnect": "code-connect/ThreeColumnThreePost.figma.ts",
-      "implementation": "src/components/modules.js#renderThreeColumnThreePost",
+      "implementation": "src/reuben-framework.js#loadReubenModule",
       "kind": "public-module",
-      "status": "code-connect-path-mapped-template-pending",
-      "codeConnectPublished": {
-        "label": "Javascript",
-        "hasTemplate": false
-      },
-      "responsiveNote": "Mobile full-width behavior is implemented by responsive classes in production."
+      "status": "source-aware-remap-pending-review",
+      "knownGap": "Legacy stars are 24 px; current Figma contract is 16 px."
     }
   ]
 }

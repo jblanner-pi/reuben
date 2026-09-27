@@ -1,13 +1,13 @@
 // url=https://www.figma.com/design/ypyq0Th1HES77IfxpXS2jq/Reuben---Email-Component-Library?node-id=57-10
-// source=src/components/modules.js
-// component=renderNlHeader
+// source=src/reuben-framework.js
+// component=resolveFigmaModule
 import figma from 'figma'
 
 const instance = figma.selectedInstance
 const content = instance.getEnum('Content', {
-  Standard: 'standard',
-  'Logo-only': 'logo-only',
-  'Image-only': 'image-only',
+  Standard: 'Standard',
+  'Logo-only': 'Logo-only',
+  'Image-only': 'Image-only',
 })
 const viewport = instance.getEnum('Viewport', {
   Desktop: 'desktop',
@@ -17,22 +17,16 @@ const title = instance.getString('Header title')
 const tagline = instance.getString('Tagline')
 
 export default {
-  example: figma.code`renderNlHeader({
-  content: "${content}",
-  ${content === 'standard' ? figma.code`title: "${title}",
-  tagline: "${tagline}",
-  logo,` : ''}
-  ${content === 'logo-only' ? figma.code`logo,` : ''}
-  ${content === 'image-only' ? figma.code`image: headerImage,` : ''}
-})`,
-  imports: ['import { renderNlHeader } from "../src/components/modules.js"'],
+  example: figma.code`await resolveFigmaModule("nl-header", "${content}")`,
+  imports: ['import { resolveFigmaModule } from "../src/reuben-framework.js"'],
   id: 'reuben-nl-header',
   metadata: {
     nestable: false,
     props: {
       viewport,
-      responsiveOutput: true,
-      assetInputs: 'logo and headerImage are supplied by the email build',
+      title,
+      tagline,
+      sourcePolicy: 'Resolve the canonical Reuben source before authoring. Unsupported design-only variants are returned as explicit gaps.',
     },
   },
 }

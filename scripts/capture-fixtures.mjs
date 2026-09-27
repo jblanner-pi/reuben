@@ -4,7 +4,7 @@ import { createRequire } from 'node:module'
 const require = createRequire(import.meta.url)
 const { chromium } = require('playwright')
 
-const fixtures = ['standard-one-column', 'logo-two-column', 'image-three-column']
+const fixtures = ['standard-one-column', 'standard-two-column', 'image-three-column']
 const viewports = [
   { name: 'desktop', width: 900, height: 1200 },
   { name: 'mobile', width: 390, height: 1400 },

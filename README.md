@@ -1,6 +1,6 @@
 # Reuben Email System Pilot
 
-An isolated pilot repository for mapping the Reuben Figma email system to production-safe responsive HTML email components.
+An isolated pilot repository for mapping the Reuben Figma email system to the established production-safe Reuben HTML framework.
 
 ## Safety boundary
 
@@ -18,13 +18,16 @@ An isolated pilot repository for mapping the Reuben Figma email system to produc
 - The reviewed component-to-source map is documented in `docs/component-mapping-proposal.md`.
 - Four property-aware Code Connect templates point to the new component-set IDs.
 - All ten Figma component sets report `CURRENT` after publication verification on 2026-09-26.
-- All four public modules are connected to their normalized renderer paths in Figma under the `Javascript` label.
-- Phase 4 normalized renderers now live under `src/components/`; the imported production HTML remains a read-only reference.
-- Three assembled fixtures pass unit tests, static email checks, and desktop/mobile browser smoke checks without horizontal overflow.
-- Property-aware parserless templates are committed under `code-connect/`, but Figma's current MCP endpoint stored path mappings only (`hasTemplate: false`). Dynamic property snippets remain pending a template-capable publication path.
-- Figma's official Code Connect CLI 2.0.1 is installed locally. All four templates pass CLI parsing and are ready for token-authenticated publication.
+- The first Code Connect templates were published on 2026-09-26 and report `hasTemplate: true`; they still target the retired normalized-renderer experiment until the source-aware replacements are reviewed and republished.
+- Phase 4 now treats `source/reuben/` as the canonical code framework rather than reconstructing its HTML in new renderers.
+- `src/reuben-framework.js` selects exact source fragments, extracts their body markup unchanged, and inserts them into the canonical base template.
+- `mapping/reuben-source-catalog.json` records exact matches, nearest legacy patterns, and unsupported Figma variants without fabricating code.
+- Three source-backed fixtures replace the earlier renderer-generated fixtures. Static QA separates assembly failures from inherited source warnings.
+- The normalized renderers under `src/components/` are retained only as an experimental comparison and are not on the Phase 4 production path.
+- Source-aware Code Connect templates are prepared locally and must be reviewed before they replace the published renderer mappings.
 - Required cross-client testing in Apple Mail, Gmail, Outlook, Yahoo, iOS, and Android remains pending an email-test sending or rendering workflow.
 - Phase 4 client coverage and entry criteria are documented in `docs/phase-4-integration-and-qa.md`.
+- The canonical assembly workflow is documented in `docs/source-framework-workflow.md`.
 - Code Connect publishing instructions are documented in `docs/code-connect-publishing.md`.
 
 ## Source references

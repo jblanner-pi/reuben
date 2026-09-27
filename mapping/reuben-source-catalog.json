@@ -1,0 +1,75 @@
+{
+  "baseTemplate": "source/reuben/templates/reuben-newsletter-template.html",
+  "insertion": {
+    "startMarker": "<!--Insert Modules Below-->",
+    "endMarker": "<!--Reuben Footer-->"
+  },
+  "modules": {
+    "header-solid-background": {
+      "source": "source/reuben/content-blocks/reuben-header-solid-bg.html",
+      "figmaComponent": "nl-header",
+      "support": "legacy-exact-with-known-gap",
+      "knownGaps": [
+        "The legacy fragment includes its own preheader; the current Figma nl-header intentionally does not.",
+        "The legacy source represents Standard only and does not provide an exact Logo-only variant."
+      ]
+    },
+    "header-image-background": {
+      "source": "source/reuben/content-blocks/reuben-header-image-bg.html",
+      "figmaComponent": "nl-header",
+      "support": "nearest-legacy-pattern",
+      "knownGaps": [
+        "This is an image-background header with overlaid artwork, not the current full-width Image-only Figma variant."
+      ]
+    },
+    "1col_1post_full-width": {
+      "source": "source/reuben/content-blocks/reuben-1col-1post-full-width.html",
+      "figmaComponent": "1col_1post_full-width",
+      "support": "exact-legacy-source",
+      "knownGaps": []
+    },
+    "2col_2post": {
+      "source": "source/reuben/content-blocks/reuben-2col-2post.html",
+      "figmaComponent": "2col_2post",
+      "support": "exact-legacy-source",
+      "knownGaps": []
+    },
+    "3col_3post": {
+      "source": "source/reuben/content-blocks/reuben-3col-3post.html",
+      "figmaComponent": "3col_3post",
+      "support": "legacy-exact-with-known-gap",
+      "knownGaps": [
+        "The legacy fragment uses 24 px star images; the current Figma contract recommends 16 px for this layout and caps stars at 20 px."
+      ]
+    }
+  },
+  "figmaVariants": {
+    "nl-header": {
+      "Standard": {
+        "moduleId": "header-solid-background",
+        "support": "legacy-exact-with-known-gap"
+      },
+      "Logo-only": {
+        "moduleId": null,
+        "support": "design-only-gap"
+      },
+      "Image-only": {
+        "moduleId": null,
+        "nearestModuleId": "header-image-background",
+        "support": "design-only-gap"
+      }
+    },
+    "1col_1post_full-width": {
+      "moduleId": "1col_1post_full-width",
+      "support": "exact-legacy-source"
+    },
+    "2col_2post": {
+      "moduleId": "2col_2post",
+      "support": "exact-legacy-source"
+    },
+    "3col_3post": {
+      "moduleId": "3col_3post",
+      "support": "legacy-exact-with-known-gap"
+    }
+  }
+}

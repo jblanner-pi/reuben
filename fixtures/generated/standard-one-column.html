@@ -1,146 +1,804 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+ xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-  <meta charset="UTF-8" />
+  
+<!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml><![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--[if !mso]><!-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--<![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no" />
-  <title>Reuben standard one-column fixture</title>
-  <style type="text/css">html,
-body {
-  margin: 0 auto !important;
-  padding: 0 !important;
-  width: 100% !important;
-}
+    <meta name="x-apple-disable-message-reformatting" />
+  <title>Reuben source framework: standard header and one-column post</title>
+  <!-- Outlook Web Font Fix - Normalise space between bullets and text with <li> | Update font stacks to web-safe backups for Outlook -->
+  <!--[if gte mso 9]>
+  <style type="text/css">
+  a { text-decoration: none; }
+  h1, .hl-1, h2, .hl-2, h3, .hl-3, h4, .hl-4 {font-family: Georgia, Times, serif !important;} 
+  p, .text, .link, .text-2, .text-3, .button_structure, .button_style, .button_structure-2, .button_style-2 {font-family: Arial, sans-serif !important;}
+  li {text-indent: -1em !important;}
+  </style>
+  <![endif]-->
+  
+    <!-- Webfont @import URL goes in a separate style block -->
+    <style type="text/css">
+    /* Webfont @import URL */
+    @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+    </style>
 
-body {
-  border-collapse: collapse !important;
-  table-layout: fixed !important;
-}
+    <style>
+    /* Gmail code must be separate */
+    @media (max-width:480px) {
+      .mobile-only {
+        display: block!important;
+        width: auto!important;
+        max-height: inherit!important;
+        overflow: visible!important;
+        float: none!important;
+      }
+      .wrap {
+        width: 100%!important;
+        max-width: 100%!important;
+        height: auto!important;
+      }
+      .m-font-24 {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 500;
+        letter-spacing: -1px;
+      }
+      .m-left-col {
+        text-align: left !important;
+        float: left !important;
+        width: 45% !important;
+        max-width: 46% !important;
+      }
+      .m-left-col.button {
+        width: 140px !important;
+        max-width: 48% !important;
+      }
+      .m-right-col {
+        float: right !important;
+        width: 38% !important;
+        height: auto !important;
+        min-height: 49vw !important;
+        max-width: 38vw !important;
+      }
+      img.m-right-col {
+        object-fit: cover;
+        object-position: center center;
+        width: 38vw !important;
+        max-width: 38vw !important;
+        height: 47.43vw !important;
+      }
+      .responsive-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+      }
+      
+      .padding-none {
+        padding: 0px !important;
+      }
+    }
+    </style>
 
-table,
-td {
-  border-collapse: collapse !important;
-}
-
-img {
-  border: 0;
-  display: block;
-  outline: none;
-  text-decoration: none;
-}
-
-a {
-  text-decoration-skip-ink: auto;
-}
-
-#outlook a {
-  padding: 0;
-}
-
-.ExternalClass,
-.ExternalClass * {
-  line-height: 100%;
-}
-
-@media screen and (max-width: 480px) {
-  u + .body .full-wrap {
-    width: 100% !important;
-    width: 100vw !important;
+    <style type="text/css">
+   /* Style CSS */
+  
+    /* Font Styling */
+  h1, .hl-1, h2, .hl-2, h3, .hl-3, h4, .hl-4 {
+    font-family: Georgia, serif;
+    color: #0D0D0D;
+  }
+  p, .text, .text-2, .text-3, .link,  .button_structure, .button_style, .button_structure-2, .button_style-2 {
+    font-family: Arial, sans-serif;
+    color: #0D0D0D;
+  }   
+    
+  h1, .hl-1 {
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+  h2, .hl-2 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  h3, .hl-3 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  h4, .hl-4 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #0D0D0D;
   }
 
-  .wrap,
-  .stack-column {
-    float: none !important;
-    height: auto !important;
-    max-width: 100% !important;
-    width: 100% !important;
+  p, .text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
   }
+  .text-2 { /* replaces footer-text */
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .text-3 { /* use to modify preheader-link, moniker classes. */
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .link {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight:400;
+    color: #014ECB;
+    text-decoration: underline;
+    text-decoration-color: #014ECB;
+  }
+  
+  /* Visual Elements */
+  .border {
+    border: 1px solid #D9D9D9;
+  }
+  .bullet {
+    color: #595959;
+    width: 10px;
+  }
+  .button_structure {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    height: 48px;
+    background-color: #0053C0;
+    text-align: center;
+    mso-line-height-rule: exactly;
+    }
+    .button_style {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      mso-line-height-rule: exactly;
+      color: #ffffff !important;
+      text-decoration: none !important;
+      text-transform: uppercase;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      border-radius: 4px;
+      padding: 14px 32px;
+      display: inline-block;
+    }
+    .button_structure-2 {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: 3px solid #0053C0;
+    height: 48px;
+    background-color: #ffffff;
+    text-align: center;
+    mso-line-height-rule: exactly;
+   }
+    .button_style-2 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    mso-line-height-rule: exactly;
+    color: #0D0D0D !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 4px;
+    padding: 14px 32px;
+    display: inline-block;
+    }
+  </style>
+  <style type="text/css">
 
-  .responsive-image {
-    height: auto !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
+    /* Structural CSS */
+    html {
+      Margin: 0 auto;
+      padding: 0;
+    }
+    body {
+      width: 100%;
+      min-width: 100%;
+      Margin: 0 auto !important;
+      padding: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+    }
+    table td {
+      border-collapse: collapse !important;
+    }
+    img {
+      display: block;
+      border: none;
+      text-align: center;
+    }
+    .p-b-4 {
+     padding-bottom: 4px;
+    }
+    .p-t-8 {
+      padding-top: 8px;
+    }
+    .p-b-8 {
+      padding-bottom: 8px;
+    }
+    .p-tb-8 {
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+    }
+    .p-t-10 {
+      padding-top: 10px;
+    }
+    .p-b-10 {
+      padding-bottom: 10px;
+    }
+    .p-tb-10 {
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+    .p-l-10 {
+      padding-left: 10px;
+    }
+    .p-r-10 {
+      padding-right: 10px;
+    }
+    .p-t-16 {
+      padding-top: 16px;
+    }
+    .p-b-16 {
+      padding-bottom: 16px;
+    }
+    .p-l-16 {
+      padding-left: 16px;
+    }
+    .p-r-16 {
+      padding-right: 16px;
+    }
+    .p-lr-16 {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .p-tb-16 {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    .p-t-20 {
+      padding-top: 20px;
+    }
+    .p-b-20 {
+      padding-bottom: 20px;
+    }
+    .p-tb-20 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .p-tblr-20 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .p-t-24 {
+      padding-top: 24px;
+    }
+    .p-b-24 {
+      padding-bottom: 24px;
+    }
+    .p-l-24 {
+      padding-left: 24px;
+    }
+    .p-r-24 {
+      padding-right: 24px;
+    }
+    .p-tb-24 {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    .p-lr-24 {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .p-blr-24 {
+      padding-bottom: 24px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .p-tblr-24 {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .p-t-32 {
+      padding-top: 32px;
+    }
+    .p-b-32 {
+      padding-bottom: 32px;
+    }
+    .p-tb-32 {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
 
-  .mobile-column-gap {
-    padding-bottom: 32px !important;
-  }
+    /* Client-specific CSS */
+    #outlook a {
+      padding: 0 !important;
+    }
+    .ExternalClass * {
+      line-height: 100%;
+    }
+    * {
+      -webkit-text-size-adjust: none;
+    }
 
-  .three-column-cell {
-    padding-bottom: 32px !important;
-    padding-right: 0 !important;
-  }
+    /* Mobile-Specific CSS */
+    @media screen and (max-width: 480px) {
+    u + .body .full-wrap {
+      width:100% !important;
+      width:100vw !important;
+    }
+    .mobile-only {
+      display: block!important;
+      width: auto!important;
+      max-height: inherit!important;
+      overflow: visible!important;
+      float: none!important;
+    }
+    .wrap {
+      width: 100%!important;
+      max-width: 100%!important;
+      height: auto!important;
+    }
+    .mobile-hidden {
+      width: 0 !important;
+      height: 0 !important;
+      display: none !important;
+    }
+    .m-left-col {
+      text-align: left !important;
+      float: left !important;
+      width: 50vw;
+      max-width: 48% !important;
 
-  .link-column {
-    border-right: 0 !important;
-  }
-
-  .link-column-cell {
-    padding: 8px 24px !important;
-  }
-}
+    }
+    .m-left-col.button {
+      width: 140px !important;
+      max-width: 48% !important;
+    }
+    .m-right-col {
+      float: right !important;
+      width: 42.4%;
+      height: auto;
+      max-width: 37.18vw !important;
+    }
+    img.m-right-col {
+      object-fit: cover;
+      object-position: center center;
+      width: 42.4vw;
+      max-width: 42.4vw !important;
+      height: 53vw;
+    }
+    .responsive-image {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    .padding-none {
+      padding: 0px !important;
+    }
+    .mp-r-0 {
+      padding-right: 0px !important;
+    }
+    .margin-none {
+      margin: 0px !important;
+    }
+    .m-align {
+      vertical-align: middle !important;
+    }
+    .m-align-top {
+      vertical-align: top !important;
+    }
+    .mw-33 {
+      width: 33% !important;
+    }
+    .m-font-12 {
+      font-size: 12px !important;
+      line-height: 16px;
+    }
+    .m-font-20 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .m-font-32 {
+      font-size: 32px !important;
+      line-height: 32px;
+    }
+    .break {
+      display: block !important;
+    }
+    .m-text-center {
+      text-align: center !important;
+    }
+    .border-none {
+      border:none !important;
+    }
+    .mp-l-0 {
+      padding-left: 0 !important;
+    }
+    .mp-t-8 {
+      padding-top: 8px !important;
+    }
+    .mp-b-8 {
+      padding-bottom: 8px !important;
+    }
+    .mp-tb-8 {
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+    }
+    .mp-t-10 {
+      padding-top: 10px !important;
+    }
+    .mp-b-10 {
+      padding-bottom: 10px !important;
+    }
+    .mp-tb-10 {
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+    .mp-t-16 {
+      padding-top: 16px !important;
+    }
+    .mp-b-16 {
+      padding-bottom: 16px !important;
+    }
+    .mp-tb-16 {
+      padding-top: 16px !important;
+      padding-bottom: 16px !important;
+    }
+    .mp-t-20 {
+      padding-top: 20px !important;
+    }
+    .mp-b-20 {
+      padding-bottom: 20px !important;
+    }
+    .mp-tb-20 {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+    }
+    .mp-t-24 {
+      padding-top: 24px !important;
+    }
+    .mp-b-24 {
+      padding-bottom: 24px !important;
+    }
+    .mp-tlr-24 {
+      padding-top: 24px !important;
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+    }
+    .mp-blr-24 {
+      padding-bottom: 24px !important;
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+    }
+    .mp-tblr-24 {
+      padding-top: 24px !important;
+      padding-bottom: 24px !important;
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+    }
+    .mp-lr-24 {
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+    }
+    .mp-lr-22 {
+      padding-left: 22px !important;
+      padding-right: 22px !important;
+    }
+    .mp-t-32 {
+      padding-top: 32px !important;
+    }
+    .mp-b-32 {
+      padding-bottom: 32px !important;
+    }
+    .mp-t-40 {
+      padding-top: 40px !important;
+    }
+    .mp-t-48 {
+      padding-top: 48px !important;
+    }
+    .mp-b-48 {
+      padding-bottom: 48px !important;
+    }
+    }
 </style>
 </head>
-<body class="body" style="margin:0;padding:0;width:100%;">
-  <div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">Standard header and full-width post QA fixture.</div>
-  <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="100%" class="full-wrap" style="width:100%;">
-    <tr><td align="center"><table role="presentation" border="0" cellspacing="0" cellpadding="0" width="700" align="center" class="wrap" bgcolor="#FFFFFF" style="background-color:#FFFFFF;"><tr><td align="center" style="padding:8px 24px;"><table role="presentation" border="0" cellspacing="0" cellpadding="0" width="100%" align="center" class="wrap">
+
+<body style="Margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;background-color:#F1F2FF" class="body">
+
+  <!--Wrapper Table-->
+<table role="presentation" class="wrap full-wrap margin-none" width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
-    <td align="center" style="font-family:Arial,sans-serif;font-size:12px;line-height:16px;text-align:center;"><a href="https://example.com/view-online" style="color:#014ECB;text-decoration:underline;">View this email in your browser</a></td>
-  </tr>
-</table></td></tr></table>
-<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="700" align="center" class="wrap" bgcolor="#D9D9D9" style="background-color:#D9D9D9;">
-  <tr><td align="center" height="92" style="height:92px;padding:0 24px;vertical-align:middle;"><table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
-  <tr>
-    <td align="right"><a href="https://example.com/"><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_Logo.png" alt="Reuben" width="120" style="border:0;display:block;height:auto;max-width:120px;" /></a></td>
-    <td align="left" style="color:#0D0D0D;font-family:Georgia,serif;font-size:28px;font-weight:700;line-height:32px;padding-left:16px;">Recipe of the Day</td>
-  </tr>
+    <td align="center">
+      <table role="presentation" border="0" cellspacing="0" cellpadding="0" class="wrap" width="700" align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
+      <tr>
+        <td align="center">
+          
+<!--Insert Modules Below-->
+
+<!-- reuben-source:start source/reuben/content-blocks/reuben-header-solid-bg.html -->
+<!-- Start Reuben Header (Solid Background) -->
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" class="wrap" width="700" align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
+    <tr>
+        <td align="center"><table role="presentation" border="0" cellspacing="0" cellpadding="0" class="wrap" width="700" align="center">
+            <tr>
+                <td align="center"><table role="presentation" width="700" class="wrap" border="0" cellspacing="0" cellpadding="0" align="center">
+					<!--Preheader Link-->
+                    <tr>
+                        <td align="center" class="text-3" bgcolor="#F2F2F2" style="background-color: #F2F2F2; text-align: center; text-decoration: underline; padding: 12px 0px 8px 0px;"><a data-link-name="" href="" style="color:#014ECB; text-decoration: underline;">Preheader Link 1</a></td>
+          			</tr>
+        		</table>
+				<table role="presentation" width="700" border="0" cellspacing="0" cellpadding="0" align="center" class="wrap" bgcolor="#D9D9D9" style="background-color: #D9D9D9;">
+                    <tr>
+                        <td align="center" class="p-tblr-16"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="wrap">
+                            <tr>
+                              <td align="center"><table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" class="wrap">
+                                    <!--Logo-->
+                                    <tr>
+                                        <td align="right"><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_Logo.png" width="120" alt="Reuben Logo" class="responsive-image" style="max-width:120px !important;" /></td>
+                                        <!--Header Title-->
+                                        <td class="hl-1" style="padding-left:16px;">Header Title</td>
+                                    </tr>
+                                </table>
+								<table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" class="wrap">
+                                    <!--Optional Copy-->
+                                    <tr>
+                                        <td align="center" class="text-2 p-t-8" style="text-align: center;">optional copy goes here</td>
+                                    </tr>
+                                </table></td>
+                            </tr>
+                        </table></td>
+                    </tr>
+                </table></td>
+			</tr>
+		</table></td>		
+    </tr>
 </table>
-<table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td align="center" style="color:#0D0D0D;font-family:Arial,sans-serif;font-size:14px;line-height:20px;padding-top:8px;text-align:center;">A tested favorite for tonight</td></tr></table></td></tr>
-</table>
-<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td height="32" style="font-size:1px;line-height:32px;">&nbsp;</td></tr></table>
-<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="652" align="center" class="wrap">
-  <tr><td align="center">
-    <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="652" align="center" class="wrap">
+<!-- end Reuben Header (Solid Bg) -->
+<!-- reuben-source:end source/reuben/content-blocks/reuben-header-solid-bg.html -->
+
+<!-- reuben-source:start source/reuben/content-blocks/reuben-1col-1post-full-width.html -->
+<!--1 Post, Full Width-->
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" class="wrap" width="652" align="center">
   <tr>
-    <td align="center"><a href="https://example.com/recipes/1?utm_source=email"><img src="https://placehold.co/1304x870/png?text=Recipe+1" alt="Finished test recipe 1" width="652" class="responsive-image" style="border:0;display:block;height:auto;max-width:652px;width:100%;" /></a></td>
-  </tr>
-</table>
-    <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="652" align="center" class="wrap"><tr><td align="center" style="padding:16px 24px 24px;">
-      <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="604" align="center" class="wrap">
+      <td align="center"><table role="presentation" class="wrap" width="652" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
-  <td align="center" style="padding-top:16px;">
-    <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#E7F2FF" style="background-color:#E7F2FF;">
-      <tr><td style="font-family:Arial,sans-serif;font-size:12px;font-weight:700;line-height:16px;padding:3px 8px;text-transform:uppercase;">Exclusive</td></tr>
+    <td align="center"><table role="presentation" class="wrap" width="652" align="center" border="0" cellspacing="0" cellpadding="0">
+      <!--Image-->
+      <tr>
+        <td align="center"><a href=""><img src="https://placehold.co/1304x870" alt="" width="652" height="435" class="responsive-image"/></a></td>
+      </tr>
     </table>
-  </td>
+    <table role="presentation" class="wrap" width="652" align="center" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" style="padding: 16px 24px 24px 24px;"><table role="presentation" class="wrap" width="604" align="center" border="0" cellspacing="0" cellpadding="0">
+        <!--Sponsored By-->
+        <tr>
+          <td align="center" class="text-3" style="padding-bottom: 4px; text-align: center; font-weight: 400; text-transform: uppercase;">SPONSORED BY</td>
+        </tr>
+        <!--Headline-->
+        <tr>
+          <td class="hl-1" align="center" style="padding-bottom: 4px; text-align: center;"><a href="" style="color: #000000; text-decoration: none;">7 Top Recipes Made Even Better in a Cast Iron Skillet</a></td>
+        </tr>
+        <!--Star Ratings-->
+        <tr>
+          <td class="p-b-4"><table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" class="wrap">
+            <tr>
+              <td align="center"><table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td align="left" style="padding-right: 3px;"><img name="" src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_FullStar_Icon.png" width="20" height="19" alt="Star Rating" style="max-width: 20px !important" /></td>
+                  <td align="center" style="padding-right: 3px;"><img name="" src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_FullStar_Icon.png" width="20" height="19" alt="Star Rating" style="max-width: 20px !important" /></td>
+                  <td align="center" style="padding-right: 3px;"><img name="" src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_FullStar_Icon.png" width="20" height="19" alt="Star Rating" style="max-width: 20px !important" /></td>
+                  <td align="center" style="padding-right: 3px;"><img name="" src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_FullStar_Icon.png" width="20" height="19" alt="Star Rating" style="max-width: 20px !important" /></td>
+                  <td align="center" style="padding-right: 10px;"><img name="" src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_EmptyStar_Icon.png" width="20" height="19" alt="Star Rating" style="max-width: 20px !important" /></td>
+                  <td align="left" class="text">4.3</td>
+              </tr>
+              </table></td>
+            </tr>
+          </table></td>
+        </tr>
+        <!--Copy-->
+        <tr>
+          <td class="text p-b-16" align="center" style="font-size: 18px; line-height: 26px; font-weight: 400; text-align: center;"><a href="" style="color: #000000; text-decoration: none;">Porttitor massa id neque aliquam vestibulum morbi blandit. Vulputate dignissim suspendisse. Vulputate odio ut enim blandit volutpat maecenas. Quam viverra orci sagittis eu volutpat.</a></td>
+          </tr>
+        <!--Links-->
+        <tr>
+          <td class="link p-b-16" align="center" style="text-align: center;"><a href="" style="color: #0053C0; text-decoration: underline;">Tetur Adipiscing Rlit Metus</a></td>
+          </tr>
+        <tr>
+          <td class="link p-b-16" align="center" style="text-align: center;"><a href="" style="color: #0053C0; text-decoration: underline;">Egestas Quis Ipsum Suspendisse</a></td>
+          </tr>
+        <tr>
+          <td class="link p-b-16" align="center" style="text-align: center;"><a href="" style="color: #0053C0; text-decoration: underline;">Libero Justo Laoreet Sit Amet Cursus</a></td>
+          </tr>
+        <tr>
+          <td class="link" align="center" style="text-align: center;"><a href="" style="color: #0053C0; text-decoration: underline;">Sed Tempus Urna Pharetra</a></td>
+          </tr>
+        <!--Button-->
+        <tr>
+          <td align="center" class="p-t-16"><table role="presentation" border="0" align="center" cellpadding="0" cellspacing="0" width="160">
+            <tr>
+              <td align="left"><table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="160">
+                <tr>
+                  <td align="center" class="button_structure"><a href="" class="button_style">LABEL</a></td>
+                </tr>
+              </table></td>
+            </tr>
+          </table></td>
+        </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table></td>
 </tr>
-  <tr><td align="center" style="font-family:Georgia,serif;font-size:28px;font-weight:700;line-height:32px;padding-top:8px;text-align:center;"><a href="https://example.com/recipes/1?utm_source=email" style="color:#0D0D0D;text-decoration:none;">Test recipe 1: a useful headline that can wrap safely</a></td></tr>
-  <tr><td align="center" style="padding-top:8px;"><table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" aria-label="Rating: 4.5 out of 5">
+</table> 
+<!-- end 1 Post, Full Width-->
+<!-- reuben-source:end source/reuben/content-blocks/reuben-1col-1post-full-width.html -->
+
+<!--Reuben Footer-->
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" class="wrap" width="700" align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF;">
   <tr>
-    <td align="center" style="padding-right:3px;"><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_FullStar_Icon.png" alt="" width="20" style="background-color:transparent;border:0;display:block;height:auto;max-width:20px;width:20px;" /></td>
-    <td align="center" style="padding-right:3px;"><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_FullStar_Icon.png" alt="" width="20" style="background-color:transparent;border:0;display:block;height:auto;max-width:20px;width:20px;" /></td>
-    <td align="center" style="padding-right:3px;"><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_FullStar_Icon.png" alt="" width="20" style="background-color:transparent;border:0;display:block;height:auto;max-width:20px;width:20px;" /></td>
-    <td align="center" style="padding-right:3px;"><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_FullStar_Icon.png" alt="" width="20" style="background-color:transparent;border:0;display:block;height:auto;max-width:20px;width:20px;" /></td>
-    <td align="center" style="padding-right:8px;"><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_HalfStar_Icon.png" alt="" width="20" style="background-color:transparent;border:0;display:block;height:auto;max-width:20px;width:20px;" /></td>
-    <td align="left" style="color:#0D0D0D;font-family:Arial,sans-serif;font-size:16px;line-height:24px;">4.5</td>
+    <td align="center"><table role="presentation" border="0" cellspacing="0" cellpadding="0" width="700" align="center" class="wrap">
+      <tr>
+        <td align="center"><table role="presentation" border="0" cellspacing="0" cellpadding="0" width="700" align="center" class="wrap">
+          <tr>
+            <td align="center" bgcolor="#F2F2F2" style="background-color: #F2F2F2; padding: 24px 0;" class="mp-lr-24"><table role="presentation" border="0" cellspacing="0" cellpadding="0" width="480" align="center" class="wrap">
+              <tr>
+                <td align="center" style="padding-bottom:24px;"><table role="presentation" width="410" border="0" cellspacing="0" cellpadding="0" align="center" class="wrap">
+                  <tr>
+                    <td align="center" class="p-b-24"><table role="presentation" width="90" border="0" cellspacing="0" cellpadding="0" align="center" class="wrap">
+                      <tr>
+                        <td align="center" class="padding-none" style="padding-right: 15px;">
+          
+                      <!--Logo-->
+                      <table role="presentation" width="85" border="0" cellspacing="0" cellpadding="0" align="center" class="wrap">
+                        <tr>
+                            <td align="center"><a data-link-name="Reuben Logo" href=""><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/Reuben_Logo.png" width="160" alt="[Brand Name] logo" style="max-width:200px !important;" /></a></td>
+                        </tr>
+                      </table></td>
+                      </tr>
+                      </table></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+              
+                    <!--Social Nav--> 
+                    <table role="presentation" height="40" border="0" cellspacing="0" cellpadding="0" align="center" class="wrap">
+                      <tr>
+                        <td align="center"><table role="presentation" border="0" cellspacing="0" cellpadding="0" class="wrap" align="center" style="max-width: 320px !important;">
+                          <tr>
+                            <td align="center" style="padding-right:16px;">
+                            <a data-link-name="Facebook Footer" href=""><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/btn-social-facebook.png" width="40" alt="Facebook" class="responsive-image" style="border-radius: 50%; max-width: 40px !important" /></a></td>
+                            <td align="center"  style="padding-right:16px;"><a data-link-name="Instagram Footer" href=""><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/btn-social-instagram.png" width="40" alt="Facebook" class="responsive-image" style="max-width: 40px !important" /></a>
+                            </td>
+                            <td align="center" style="padding-right:16px;"><a data-link-name="Twitter Footer" href=""><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/btn-social-twitter.png" width="40" alt="Twitter" class="responsive-image" style="max-width: 40px !important" /></a></td>
+                            <td align="center"  style="padding-right:16px;"><a data-link-name="Pinterest Footer" href=""><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/btn-social-pinterest.png" width="40" alt="Pinterest" class="responsive-image" style="max-width: 40px !important" /></a></td>
+                            <td align="center"  style="padding-right:16px;"><a data-link-name="Youtube Footer" href="">
+                            <img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/btn-social-youtube.png" width="40" alt="YouTube" class="responsive-image" style="max-width: 40px !important" /></a></td>
+                            <td align="center"><a data-link-name="TikTok Footer" href=""><img src="https://images.meredith.com/Reuben/Newsletter_Design_System/Images/2023/btn-social-tiktok.png" width="40" alt="TikTok" class="responsive-image" style="max-width: 40px !important" /></a></td>
+                          </tr>
+                        </table></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+              </table></td>
+              </tr>
+              <tr>
+                  <td class="link" style="font-size: 14px;line-height: 20px;padding-bottom: 16px;font-weight:700;text-align:center;"><a data-link-name="Subscribe to the Magazine" href="" style="text-decoration: underline;">Unsubscribe</a></td>
+              </tr>
+              <tr>
+                  <td class="text-3" style="text-align: center;">Each product we feature has been independently selected and reviewed by our editorial team. If you make a purchase using the links included, we may earn commission.</td>
+              </tr>
+              <tr>
+                <td align="center" class="p-tb-16"><table role="presentation" border="0" cellspacing="0" cellpadding="0" class="wrap" align="center">
+                  <tr>
+                    <td align="center"><table role="presentation" border="0" cellspacing="0" cellpadding="0" class="wrap" align="center">
+                      <tr>
+                        <td class="text-2 center" style="text-align:center;">This email was sent to {{email}}</td>
+                      </tr>
+                      <tr>
+                        <td class="text-2 center" style="text-align:center;">Was this email forwarded to you? <a href="" style="text-decoration:underline !important;font-weight:700;">Subscribe Here</a></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td align="center"><table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" class="wrap">
+                  <tr>
+                      <td align="center"><table role="presentation" border="0" cellspacing="0" cellpadding="0" class="wrap" align="center">
+                        <tr>
+                          <td class="text-2 center" style="text-align: center;">
+                          <a data-link-name="Privacy Policy" href="https://www.dotdashmeredith.com/brands-privacy" style="text-decoration:underline !important">Privacy&nbsp;Policy</a>&nbsp;|
+                          <a data-link-name="Terms of Service" href="https://www.dotdashmeredith.com/terms-of-use" style="text-decoration:underline !important">Terms&nbsp;of&nbsp;Service</a>&nbsp;|
+                          <a data-link-name="Unsubscribe" href="" style="text-decoration:underline !important">Help Center</a></td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="text-2">Dotdash Meredith, 225 Liberty Street 4th Floor, New York, NY 10281</td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="text-2">©2023. All rights Reserved.</td>
+                        </tr>
+                      </table></td>
+                  </tr>
+                  </table></td>
+              </tr>
+          </table></td>
+        </tr>
+    </table></td>
   </tr>
-</table></td></tr>
-  <tr><td align="center" style="color:#0D0D0D;font-family:Arial,sans-serif;font-size:16px;line-height:24px;padding-top:8px;text-align:center;"><a href="https://example.com/recipes/1?utm_source=email" style="color:#0D0D0D;text-decoration:none;">Production-like supporting copy verifies wrapping, spacing, and fallback typography across email clients.</a></td></tr>
-  <tr><td align="center" style="font-family:Arial,sans-serif;font-size:18px;line-height:24px;padding-top:8px;text-align:center;"><a href="https://example.com/quick-dinners?utm_source=email" style="color:#014ECB;text-decoration:underline;">Quick dinners</a></td></tr>
-<tr><td align="center" style="font-family:Arial,sans-serif;font-size:18px;line-height:24px;padding-top:8px;text-align:center;"><a href="https://example.com/seasonal?utm_source=email" style="color:#014ECB;text-decoration:underline;">Seasonal recipes</a></td></tr>
-  <tr><td align="center" style="padding-top:16px;"><table role="presentation" border="0" cellspacing="0" cellpadding="0" width="160" align="center" style="border-collapse:separate;">
-  <tr>
-    <td align="center" height="48" bgcolor="#0053C0" style="border-radius:4px;height:48px;mso-line-height-rule:exactly;">
-      <a href="https://example.com/recipes/1?utm_source=email&amp;utm_medium=cta" style="background-color:#0053C0;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:1px;line-height:20px;padding:14px 24px;text-decoration:none;text-transform:uppercase;width:112px;"><!--[if mso]>&nbsp;<![endif]-->View recipe<!--[if mso]>&nbsp;<![endif]--></a>
-    </td>
-  </tr>
-</table></td></tr>
 </table>
-    </td></tr></table>
-  </td></tr>
-</table></td></tr>
-  </table>
+
+<!--Dotdash Meredith footer-->
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="700" align="center" class="wrap">
+  <tr>
+    <td align="center" class="p-tblr-24"><table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" class="wrap">
+      <tr>
+        <td align="center"><table role="presentation" width="112" border="0" cellspacing="0" cellpadding="0" align="left" class="wrap">
+          <tr>
+            <td align="center" style="padding-right: 12px;" class="padding-none"><table role="presentation" width="100" border="0" cellspacing="0" cellpadding="0" align="center" class="wrap">
+              <tr>
+                <td align="center"><img src="http://images.meredith.com/alr/newsletters/2023/05/DotdashMeredith_Logo_DM.png" width="100" alt="Dotdash Meredith" style="max-width:100px !important;" /></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table>
+        <!--[if (gte mso 9)|(IE)]></td><td><![endif]-->
+        <table role="presentation" height="24" class="wrap" border="0" cellspacing="0" cellpadding="0" align="left">
+          <tr>
+            <td align="center" class="text-2 mp-t-10" style="color: #000000 95%; text-align: center;">Brand name is part of the <a data-link-name="" href="https://www.dotdashmeredith.com/" style="color:#000000 95%; text-decoration: underline;">Dotdash Meredith</a> publishing family.</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table></td>
+    </tr>
+</table>
+<!--end Reuben Footer--> 
+ 
+                </td>   
+            </tr>
+        </table>
+      </td>
+    </tr>
+</table>
+  
+  <!-- End of Wrapper Table -->
+
+
+    
+  <!-- SAFE RTB -->
+  
+  <!--Yahoo-specific CSS (compressed CSS block from <head> | visit minifier.org for online compression tool)-->
+  <!--end of Yahoo-specific CSS-->
+  
 </body>
 </html>
