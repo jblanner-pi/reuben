@@ -34,9 +34,9 @@ The implementation lives in `src/reuben-framework.js`. It is intentionally small
 | `nl-header / Standard` | `reuben-header-solid-bg.html` | Legacy source exists, but includes a bundled preheader that the current component excludes |
 | `nl-header / Logo-only` | None | Design-only gap |
 | `nl-header / Image-only` | `reuben-header-image-bg.html` is the nearest pattern | Design-only gap; existing source overlays artwork rather than rendering one full-width image |
-| `1col_1post_full-width` | `reuben-1col-1post-full-width.html` | Exact legacy source |
-| `2col_2post` | `reuben-2col-2post.html` | Exact legacy source |
-| `3col_3post` | `reuben-3col-3post.html` | Legacy source exists; 24 px stars conflict with the current 16 px design contract |
+| `1col_1post_full-width` | `reuben-1col-1post-full-width.html` | Legacy source exists; its 20 px stars differ from the unified 24 px Figma standard |
+| `2col_2post` | `reuben-2col-2post.html` | Legacy source exists; its 20 px stars differ from the unified 24 px Figma standard |
+| `3col_3post` | `reuben-3col-3post.html` | Exact legacy source; 24 px stars match Figma |
 
 ## Content authoring
 

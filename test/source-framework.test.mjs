@@ -69,9 +69,12 @@ test('Figma mapping exposes unsupported design variants instead of fabricating H
   assert.equal(imageOnly.nearestModuleId, 'header-image-background')
 })
 
-test('legacy three-column star sizing is recorded as a known source gap', async () => {
+test('star sizing records the remaining 20 px source gaps after Figma standardized on 24 px', async () => {
   const catalog = await getReubenSourceCatalog()
+  const oneColumn = await loadReubenModule('1col_1post_full-width')
   const module = await loadReubenModule('3col_3post')
+  assert.match(oneColumn.html, /Star_Icon\.png" width="20"/)
   assert.match(module.html, /Star_Icon\.png" width="24"/)
-  assert.ok(catalog.modules['3col_3post'].knownGaps.some(gap => gap.includes('24 px')))
+  assert.ok(catalog.modules['1col_1post_full-width'].knownGaps.some(gap => gap.includes('20 px')))
+  assert.equal(catalog.modules['3col_3post'].knownGaps.length, 0)
 })

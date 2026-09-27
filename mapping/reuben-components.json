@@ -35,7 +35,7 @@
       "figmaNodeId": "33:12",
       "source": ["source/reuben/content-blocks/reuben-1col-1post-full-width.html", "source/reuben/content-blocks/reuben-2col-2post.html", "source/reuben/content-blocks/reuben-3col-3post.html"],
       "kind": "embedded-source-pattern",
-      "status": "three-column-size-gap-recorded"
+      "status": "figma-unified-24px-one-and-two-column-source-gap-recorded"
     },
     {
       "figmaName": "Email/Preheader link",
@@ -75,7 +75,8 @@
       "codeConnect": "code-connect/OneColumnOnePostFullWidth.figma.ts",
       "implementation": "src/reuben-framework.js#loadReubenModule",
       "kind": "public-module",
-      "status": "source-aware-remap-pending-review"
+      "status": "source-aware-remap-pending-review",
+      "knownGap": "Canonical stars are 20 px; Figma standard is 24 px."
     },
     {
       "figmaName": "2col_2post",
@@ -84,7 +85,8 @@
       "codeConnect": "code-connect/TwoColumnTwoPost.figma.ts",
       "implementation": "src/reuben-framework.js#loadReubenModule",
       "kind": "public-module",
-      "status": "source-aware-remap-pending-review"
+      "status": "source-aware-remap-pending-review",
+      "knownGap": "Canonical stars are 20 px; Figma standard is 24 px."
     },
     {
       "figmaName": "3col_3post",
@@ -94,7 +96,7 @@
       "implementation": "src/reuben-framework.js#loadReubenModule",
       "kind": "public-module",
       "status": "source-aware-remap-pending-review",
-      "knownGap": "Legacy stars are 24 px; current Figma contract is 16 px."
+      "starSizing": "Canonical and Figma stars both use 24 px."
     }
   ]
 }

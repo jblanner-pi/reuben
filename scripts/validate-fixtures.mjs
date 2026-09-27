@@ -24,13 +24,13 @@ for (const name of names) {
 
   const emptyLinks = (html.match(/href="\s*"/gi) ?? []).length
   const insecureImages = (html.match(/src="http:\/\//gi) ?? []).length
-  const legacyStars = (html.match(/Star_Icon\.png"[^>]*width="24"/gi) ?? []).length
+  const nonstandardStars = (html.match(/Star_Icon\.png"[^>]*width="20"/gi) ?? []).length
   const tables = (html.match(/<table\b/gi) ?? []).length
   const presentationTables = (html.match(/<table\b[^>]*role="presentation"/gi) ?? []).length
 
   if (emptyLinks) warnings.push(`${name}: ${emptyLinks} empty authoring link(s) inherited from canonical source`)
   if (insecureImages) warnings.push(`${name}: ${insecureImages} HTTP image URL(s) inherited from canonical source`)
-  if (legacyStars) warnings.push(`${name}: ${legacyStars} legacy 24 px star image(s); Figma contract is 16 px for three-column`)
+  if (nonstandardStars) warnings.push(`${name}: ${nonstandardStars} canonical 20 px star image(s); Figma now standardizes stars at 24 px`)
   if (tables !== presentationTables) warnings.push(`${name}: ${tables - presentationTables} table(s) lack role="presentation" in canonical source`)
 }
 

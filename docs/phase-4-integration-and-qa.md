@@ -60,7 +60,7 @@ Fixture files:
 1. The solid-background header includes a preheader; the current Figma `nl-header` intentionally excludes it.
 2. No exact legacy source exists for the Figma Logo-only header.
 3. The legacy image-background header is not the new full-width Image-only design.
-4. The legacy three-column module uses 24 px star artwork; the current design contract calls for 16 px and caps stars at 20 px.
+4. Figma now standardizes all star icons at 24 px. The legacy one- and two-column modules still use 20 px stars; the three-column module already matches at 24 px.
 5. Canonical fragments retain authoring placeholders, empty links, HTTP image URLs, and some tables without `role="presentation"`.
 
 These are tracked findings, not assembly failures. Any correction should be approved for the upstream Reuben framework and then imported, rather than silently maintained as a local fork.
@@ -71,8 +71,8 @@ All three fixtures were rendered at 900 px desktop and 390 px mobile widths in h
 
 - No horizontal overflow occurred in any of the six renders.
 - Multi-column modules retained their desktop layout and stacked using the canonical mobile behavior.
-- The one- and two-column fixtures rendered 20 px stars.
-- The three-column fixture rendered the canonical 24 px stars, confirming source gap 4 above.
+- The one- and two-column fixtures rendered the canonical 20 px stars, confirming the remaining source gap above.
+- The three-column fixture rendered 24 px stars and now matches the unified Figma standard.
 - External placeholder artwork was not consistently available in the local capture environment; Email on Acid remains the rendering authority for production-client evidence.
 
 ## Evidence record

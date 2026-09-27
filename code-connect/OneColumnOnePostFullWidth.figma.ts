@@ -17,7 +17,7 @@ export default {
     nestable: false,
     props: {
       viewport,
-      sourcePolicy: 'Returns the exact body fragment from the canonical Reuben source snapshot.',
+      sourcePolicy: 'Returns the exact canonical fragment. Its 20 px stars remain a recorded source gap against the unified 24 px Figma standard.',
     },
   },
 }

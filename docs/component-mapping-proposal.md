@@ -25,7 +25,7 @@ This document records the reviewed design-to-code mapping for the Phase 3 pilot.
 | `nl-header` | `57:10` | Content, viewport, title, tagline, header image | `source/reuben/content-blocks/reuben-header-solid-bg.html`; nearest image pattern: `reuben-header-image-bg.html` | Standard has legacy source with a bundled-preheader gap; Logo-only and Image-only are design-only gaps |
 | `1col_1post_full-width` | `61:69` | Viewport, media, post content | `source/reuben/content-blocks/reuben-1col-1post-full-width.html` | Exact source-backed mapping prepared |
 | `2col_2post` | `68:136` | Viewport, section title | `source/reuben/content-blocks/reuben-2col-2post.html` | Exact source-backed mapping prepared |
-| `3col_3post` | `75:387` | Viewport, section title | `source/reuben/content-blocks/reuben-3col-3post.html` | Source-backed mapping prepared with legacy 24 px star gap recorded |
+| `3col_3post` | `75:387` | Viewport, section title | `source/reuben/content-blocks/reuben-3col-3post.html` | Source-backed mapping prepared; canonical 24 px stars match Figma |
 
 ## Code Connect readiness
 
@@ -43,7 +43,7 @@ The remaining integration sequence is:
 - The `nl-header` Figma set includes Standard, Logo-only, and Image-only states, but the existing code framework does not contain exact Logo-only or full-width Image-only fragments. The image-background source is a nearest pattern, not an exact mapping.
 - The legacy solid-header source still includes a preheader row, while the Figma `nl-header` component intentionally does not. This remains an explicit upstream source gap.
 - The legacy preheader source contains two links, a gray background, and outer padding. The current Figma primitive is one centered link with a white default presentation and no intrinsic background or outer padding; its wrapper owns those presentation values.
-- The legacy `3col_3post` source uses 24 px star artwork. The current Figma contract specifies 16 px for the three-column layout, so the source correction requires upstream approval.
+- Figma now uses one 24 px star standard. The canonical `3col_3post` source matches; the `1col_1post_full-width` and `2col_2post` sources retain 20 px stars and require an upstream decision before their markup changes.
 - The current image-background header source overlays logo/title artwork. It is not an exact implementation of the new full-width Image-only variant; that branch needs a dedicated normalized output state.
 - `3col_3post` mobile-full-width is an explicit design state; production implements the behavior through responsive classes rather than a separate component API.
 - The mobile `1col_1post_full-width` composition uses a fresh narrow post-content instance so text remains visible without clipping.

@@ -53,8 +53,8 @@ Only primitives needed by the four public modules are in v1. Footer, advertising
 | `size/button/default-width` | 160px | Full-width post button table |
 | `radius/button` | 4px | Base-template button link CSS |
 | `size/divider` | 1px | Link-row borders |
-| `size/rating/compact` | 16px | Corrected compact icon width; artwork scales with bounds |
-| `size/rating/standard` | 20px | Corrected maximum icon width; artwork scales with bounds |
+| `size/rating/compact` | 24px | Compatibility alias for the unified Reuben star width |
+| `size/rating/standard` | 24px | Unified Reuben star width |
 | `spacing/4` | 4px | Base-template utility |
 | `spacing/8` | 8px | Base-template utility |
 | `spacing/10` | 10px | Base-template utility |

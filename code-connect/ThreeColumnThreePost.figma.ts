@@ -19,7 +19,7 @@ export default {
     props: {
       viewport,
       sectionTitle,
-      sourcePolicy: 'Returns the exact canonical fragment and reports the legacy 24 px star-size gap separately.',
+      sourcePolicy: 'Returns the exact canonical fragment; its 24 px stars match the unified Figma standard.',
     },
   },
 }

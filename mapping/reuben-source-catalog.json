@@ -25,22 +25,24 @@
     "1col_1post_full-width": {
       "source": "source/reuben/content-blocks/reuben-1col-1post-full-width.html",
       "figmaComponent": "1col_1post_full-width",
-      "support": "exact-legacy-source",
-      "knownGaps": []
+      "support": "legacy-exact-with-known-gap",
+      "knownGaps": [
+        "The canonical fragment uses 20 px star images; Figma now standardizes all star icons at 24 px."
+      ]
     },
     "2col_2post": {
       "source": "source/reuben/content-blocks/reuben-2col-2post.html",
       "figmaComponent": "2col_2post",
-      "support": "exact-legacy-source",
-      "knownGaps": []
+      "support": "legacy-exact-with-known-gap",
+      "knownGaps": [
+        "The canonical fragment uses 20 px star images; Figma now standardizes all star icons at 24 px."
+      ]
     },
     "3col_3post": {
       "source": "source/reuben/content-blocks/reuben-3col-3post.html",
       "figmaComponent": "3col_3post",
-      "support": "legacy-exact-with-known-gap",
-      "knownGaps": [
-        "The legacy fragment uses 24 px star images; the current Figma contract recommends 16 px for this layout and caps stars at 20 px."
-      ]
+      "support": "exact-legacy-source",
+      "knownGaps": []
     }
   },
   "figmaVariants": {
@@ -61,15 +63,15 @@
     },
     "1col_1post_full-width": {
       "moduleId": "1col_1post_full-width",
-      "support": "exact-legacy-source"
+      "support": "legacy-exact-with-known-gap"
     },
     "2col_2post": {
       "moduleId": "2col_2post",
-      "support": "exact-legacy-source"
+      "support": "legacy-exact-with-known-gap"
     },
     "3col_3post": {
       "moduleId": "3col_3post",
-      "support": "legacy-exact-with-known-gap"
+      "support": "exact-legacy-source"
     }
   }
 }
